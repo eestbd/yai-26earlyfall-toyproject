@@ -48,6 +48,132 @@
   `OFF→ON`, `ON→OFF`, `OFF→ON`, `ON→OFF`, `OFF→ON`이다.
 - 10단계에서는 설정만 검증한다. 모델 로딩, generation, warm-up과 본측정은 실행하지 않는다.
 
+## Warm-up (11단계)
+
+- 실행: `python -B src/run_warmup.py`; 검증 기록: `results/warmup_validation.json`
+- 고정 token IDs를 직접 GPU에 올린 후, 같은 모델에서 OFF 2회 → ON 2회 실행한다.
+- 매 실행마다 새 generation config를 사용하며, 이전 실행의 KV Cache를 넘기지 않는다.
+- BF16·eager·eval·inference mode를 적용하고 새 토큰 128개 및 입력 prefix 보존을 검사한다.
+- 임시 forward hook으로 각 생성 단계의 다음 토큰용 raw logits 유한성을 검사한다.
+  이 hook은 성공·실패 시 모두 제거되며, GPU logits나 KV Cache를 기록에 보관하지 않는다.
+- 실행 사이 출력 tensor를 해제하고 GC·GPU synchronize를 수행한다. CUDA allocator cache는 비우지 않는다.
+- Warm-up 기록은 성능 통계에서 제외한다. 이 단계에서는 latency·throughput·peak memory를 측정하지 않는다.
+- `run_warmup(model, inputs, config)`는 이후 본측정 프로세스에서 재사용한다.
+  이번 단독 실행이 다음 Python 프로세스의 warm-up을 대신하지 않으므로, 본측정 직전에 같은 모델·프로세스에서 다시 실행해야 한다.
+
+## 본측정 반복 루프 (12단계)
+
+- 12단계 당시 실행 검증 기록: `results/pilot_loop_validation.json` (성능 측정 전 기록으로 보존).
+- `src/run_pilot.py`의 현재 실행 범위와 출력 파일은 아래 15단계를 따른다.
+- 모델과 GPU 입력을 한 번 준비하고, 같은 프로세스에서 warm-up OFF 2회 → ON 2회를 실행한다.
+- Warm-up 진단 hook이 제거된 것을 확인한 뒤 아래 순서로 각 조건 5회씩 실행한다.
+  - repeat 0: OFF → ON
+  - repeat 1: ON → OFF
+  - repeat 2: OFF → ON
+  - repeat 3: ON → OFF
+  - repeat 4: OFF → ON
+- 각 실행은 새 generation config를 사용한다. 고정 입력에서 다시 시작하며 이전 KV Cache를 전달하지 않는다.
+- 실행 사이 출력 GPU tensor를 해제하고 GC·synchronize를 수행한다. 기록에는 CPU token IDs만 보관한다.
+- 각 실행에서 새 토큰 수 128개, 입력 prefix 보존 및 입력 IDs·mask의 불변성을 검사한다.
+- Warm-up과 반복 실행 기록은 별도 배열에 저장한다. 실패하면 중단하고 부분 결과와 오류를 남긴다.
+- 12단계는 반복 루프의 실제 실행 검증이다. Latency·throughput·peak memory와 성능 통계는 아직 없으며,
+  이번 기록은 성능 측정 표본에 포함하지 않는다. 측정 기능은 13–15단계에서 추가한다.
+
+## Total latency (13단계)
+
+- 13단계 측정 기록: `results/pilot_latency.json` (보존). 현재 실행 명령과 출력은 아래 15단계를 따른다.
+- 같은 프로세스에서 모델·GPU 입력 준비 → warm-up 4회 → 교대 본측정 10회를 실행한다.
+- 매 실행마다 generation config 준비와 GC를 마친 뒤, inference mode 안에서 아래 순서로 측정한다.
+  1. `torch.cuda.synchronize(device)`
+  2. `started = time.perf_counter()`
+  3. `outputs = model.generate(...)`
+  4. `torch.cuda.synchronize(device)`
+  5. `total_latency_seconds = time.perf_counter() - started`
+- 측정값은 초 단위이며 prefill과 decode를 포함한 전체 generation의 경과 시간이다.
+  GPU kernel 시간만이 아니라 `generate()` 내부 CPU 작업과 완료 동기화 비용도 포함한다.
+- 모델 로딩, 입력 GPU 전송, config 생성, GC, warm-up, 출력 검증·CPU 복사 및 결과 저장은 측정 구간 밖이다.
+- Warm-up 진단 hook을 제거한 상태로 측정한다. 매 실행에서 새 토큰 128개 및 유한한 양수 latency를 확인한다.
+- 성공한 본측정 기록만 `included_in_statistics=true`로 표시하며 warm-up은 계속 제외한다.
+  현재 단계에서는 raw latency 5회씩만 저장하고 통계를 계산하지 않는다.
+- Throughput, peak memory와 최종 mean/std·speedup·ON/OFF 출력 일치 검증은 후속 단계에서 추가한다.
+
+## Throughput (14단계)
+
+- 정의: `throughput_tokens_per_second = actual_generated_tokens / total_latency_seconds`.
+- 분자는 출력에서 확인한 실제 새 토큰 수이며 prompt 토큰은 포함하지 않는다.
+  분모는 prefill과 decode를 포함하는 전체 generation latency다. Decode 전용 throughput은 아니다.
+- `src/calculate_throughput.py`의 공통 함수가 양수 토큰 수·유한한 양수 latency를 검사하고 계산한다.
+- 기존 측정값 사용: `python -B src/calculate_throughput.py`.
+  13단계 `results/pilot_latency.json`을 읽고 GPU 재실행 없이 `results/pilot_throughput.json`에 저장한다.
+  원본 latency·출력 IDs·측정 시각·측정 코드 해시는 그대로 보존하고, 계산 출처와 시각은 `derivation`에 별도로 기록한다.
+- 새로 측정하는 `src/run_pilot.py`도 동일한 계산 함수를 사용한다.
+  현재는 아래 15단계에 따라 메모리까지 함께 측정하고 `results/pilot_memory.json`에 저장한다.
+  14단계 기존 결과는 별도로 보존한다.
+- Throughput 계산은 timer 종료 후 수행한다. Warm-up에는 throughput을 계산하지 않으며 통계에서도 제외한다.
+- 이 단계에서는 기존 10개 표본에 대한 throughput만 계산·검증한다.
+  Peak memory와 최종 mean/std·speedup·ON/OFF 출력 일치 검증은 후속 단계에서 진행한다.
+
+## GPU memory (15단계)
+
+- 실행: `python -B src/run_pilot.py`; 결과: `results/pilot_memory.json`.
+- 같은 모델·프로세스에서 warm-up 4회 후, 고정 교대 순서로 OFF/ON 각 5회를 측정한다.
+- 매 실행 순서: 이전 출력 해제 → `gc.collect()` → `torch.cuda.synchronize(device)` →
+  `memory_allocated()` / `memory_reserved()` baseline 기록 → `reset_peak_memory_stats()` → generation.
+- Generation 완료 동기화와 timer 종료 직후 `max_memory_allocated()` 및 `max_memory_reserved()`를 읽는다.
+  출력 길이 검증 등 후속 GPU 연산이 peak에 섞이지 않도록 peak를 먼저 읽는다.
+- Baseline·peak 조회 및 peak 초기화는 latency 구간 밖이다. Latency와 throughput도 같은 실행에서 기록한다.
+- 원시 값은 bytes이며 화면 출력만 MiB (`bytes / 2**20`)로 변환한다.
+- Baseline은 상주 모델·입력을 포함한다. `peak_allocated_above_baseline_bytes`는 allocated peak에서
+  baseline을 뺀 값이며 임시 tensor 등을 포함하므로 KV Cache 자체 크기로 해석하지 않는다.
+- Allocated는 PyTorch가 tensor 등에 할당 중인 메모리, reserved는 재사용 가능한 allocator cache까지 포함한다.
+  매 실행마다 `empty_cache()`를 호출하지 않으므로 reserved에는 warm-up과 앞선 실행의 영향이 남을 수 있다.
+- 이 값은 해당 프로세스의 PyTorch CUDA allocator 통계다. GPU 전체 사용량이나 PyTorch 외부 할당량은 아니다.
+- Warm-up은 성능 통계에서 제외한다. 이번 단계는 10개 raw 표본 저장까지 수행하며,
+  최종 mean/std·speedup·ON/OFF 출력 일치 검증은 16단계에서 진행한다.
+
+## 결과 검증·통계·저장 (16단계)
+
+- 실행: `python -B src/summarize_pilot.py`. GPU 재실행이나 패키지 설치 없이 저장된 15단계 표본만 분석한다.
+- Raw JSON: `results/pilot_memory.json` (원본 보존); raw CSV: `results/pilot_raw.csv` (본측정 10행).
+- 검증과 집계 결과: `results/pilot_summary.json`. 측정 시각과 분석 시각, raw 파일 및 코드 해시를 구분해 기록한다.
+- 고정 입력·설정·측정 코드 해시, warm-up 제외, 교대 순서, 각 조건 5회, 실제 새 토큰 128개,
+  출력 token ID 해시, throughput 계산 및 메모리 baseline/peak/delta의 정합성을 검증한다.
+- ON/OFF는 해시만 비교하지 않고 실제 token ID 배열을 비교한다. 같은 repeat의 5쌍과 전체 10회를
+  첫 OFF 출력에 대조하며 첫 유효 OFF/ON token IDs도 summary에 보존한다.
+- 불일치 시 최초 차이의 새 토큰 기준 0-based 위치와 양쪽 ID를 저장하고 실패로 종료한다.
+  손상된 hash·누락된 실행·유효하지 않은 측정값은 집계 전에 오류로 처리한다.
+- 각 조건의 표본 수는 5이며 표준편차는 표본 표준편차 (`ddof=1`)다. 이상치를 제거하지 않는다.
+- Throughput 평균은 실행별 `actual_generated_tokens / latency`의 산술평균이다.
+- Speedup은 `mean_OFF_latency / mean_ON_latency`이며 1보다 커야 ON이 더 빠르다는 뜻이다.
+- 메모리 통계의 원시 단위는 bytes, 표시 단위 MiB는 `bytes / 2**20`이다.
+
+이번 표본은 전체 10회 token IDs가 일치했다. 평균 ± 표본 표준편차는 다음과 같다.
+
+| 지표 | OFF | ON |
+|---|---:|---:|
+| Total latency (s) | 3.227592 ± 0.004935 | 3.252939 ± 0.038871 |
+| Throughput (tokens/s) | 39.658127 ± 0.060574 | 39.353463 ± 0.463296 |
+| Peak allocated (MiB) | 2970.900879 ± 0 | 2965.484375 ± 0 |
+| Peak reserved (MiB) | 3184 ± 0 | 3184 ± 0 |
+
+Speedup은 **0.992208×**로, 이번 128-input/128-generation 조건에서는 속도 향상이 관측되지 않았다.
+이는 각 조건 5회에 대한 기술 통계이며, 성능 차이의 통계적 유의성이나 다른 길이에서의 성능을 주장하지 않는다.
+Peak allocated 차이를 KV Cache 자체 크기로 해석하지 않는다.
+18단계 확장 실험은 아직 수행하지 않았다. 그래프와 Git 백업 범위는 아래 17단계를 참고한다.
+
+## 그래프와 Git 백업 (17단계)
+
+- 그래프 생성: `python -B src/plot_pilot.py`. 저장된 raw JSON과 summary의 출처 해시를 확인하고,
+  모델 실행 없이 `plots/pilot_results.png`와 `plots/pilot_results.pdf`를 생성한다.
+- 설치된 Matplotlib을 사용하며 새 패키지는 설치하지 않는다. 버전·입력/출력 해시는 `results/plot_metadata.json`에 기록한다.
+- Latency, throughput, peak allocated, baseline 대비 allocated 증가량을 표시한다.
+  점은 개별 표본 5개, 다이아몬드와 error bar는 평균 ± 표본 표준편차 (`ddof=1`)다.
+  모든 y축은 0에서 시작하며 공통 baseline·peak reserved 및 speedup도 명시한다.
+- README에 결과 요약, 그래프, 원본 데이터와 검증 결과 링크, 실행 명령을 정리한다.
+- 백업 범위: 실험 코드·규격·환경 기록·고정 입력·측정/검증 CSV·JSON·PNG/PDF.
+  모델 가중치·cache·가상환경은 `.gitignore`로 제외한다.
+- 원격 백업은 `origin/main`으로 push가 성공하고 remote commit과 로컬 HEAD가 일치할 때 완료된다.
+
 ## 변경 근거와 검증 기록
 
 FP16 + eager에서 첫 attention의 scaling 이전 Q×K 값이 약 215,584로 관측되어,

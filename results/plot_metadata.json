@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-09-24T12:27:30.654686+00:00",
+  "matplotlib_version": "3.9.2",
+  "script_sha256": "21aa67060680d0a9c98125c03a1c0d1b05b994526b03a9fc4ec85aef9a44bf50",
+  "inputs": {
+    "results/pilot_summary.json": "0cc0cf643e87024fc9cf2a845f4703f7d646c9fef6a29b474e2d26ae7123effb",
+    "results/pilot_memory.json": "e6e8d3e2d9a99c4ea9c310d63314bd77feace69c94d8bfa088612c917ff9d09d"
+  },
+  "outputs": {
+    "plots/pilot_results.png": "25043d4b0f3e5c0423fab636e92f9063930f2639ecde6b3dc5f7daf3bf487cd9",
+    "plots/pilot_results.pdf": "a3ea9b3df1e1362743cea35947f097feddaa5a2326c588772d80b98fb3cd14c6"
+  },
+  "gpu_generation_reexecuted": false,
+  "error_bars": "sample standard deviation, ddof=1"
+}
