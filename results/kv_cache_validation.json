@@ -1,0 +1,1209 @@
+{
+  "status": "passed",
+  "scope": "step_8_short_input_cache_behavior_validation",
+  "recorded_at_utc": "2026-09-24T10:05:04.861598+00:00",
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "source_metadata_sha256": "267dd5b3b9ca9f69fa4437a5fbe4de8f857abfc85663e5ee4c2de3ca2603bfac",
+  "validation_script_sha256": "66da3a2ae32586a4c0e99bd61129f9a8ea41d323eb366429649dfad0afa39bff",
+  "python_version": "3.10.12",
+  "packages": {
+    "torch": "2.3.1+cu121",
+    "transformers": "4.46.3",
+    "accelerate": "0.34.2",
+    "huggingface-hub": "0.26.2",
+    "safetensors": "0.4.5",
+    "numpy": "1.26.4"
+  },
+  "local_path": "models/Qwen2.5-1.5B",
+  "storage_path": "/tmp/kv-cache-project-models/Qwen2.5-1.5B",
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "cuda_runtime": "12.1",
+  "dtype": "torch.bfloat16",
+  "device": "cuda:0",
+  "attention_implementation": "eager",
+  "seed": 42,
+  "tf32_matmul_allowed": false,
+  "eval_mode": true,
+  "inference_mode_used": true,
+  "local_files_only": true,
+  "prompt": "The purpose of a key-value cache in autoregressive language models is",
+  "input_purpose": "temporary functional check; not the fixed benchmark input",
+  "tokenizer_add_special_tokens": false,
+  "input_token_ids": [
+    785,
+    7428,
+    315,
+    264,
+    1376,
+    19083,
+    6500,
+    304,
+    3078,
+    460,
+    46719,
+    4128,
+    4119,
+    374
+  ],
+  "prompt_tokens": 14,
+  "num_hidden_layers": 28,
+  "num_attention_heads": 12,
+  "num_key_value_heads": 2,
+  "head_dim": 128,
+  "shape_axes": [
+    "batch",
+    "kv_heads",
+    "cached_tokens",
+    "head_dim"
+  ],
+  "prefill": {
+    "off_past_key_values_is_none": true,
+    "on_past_key_values_is_none": false,
+    "on_cache_type": "tuple",
+    "layers": [
+      {
+        "layer": 0,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 1,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 2,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 3,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 4,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 5,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 6,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 7,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 8,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 9,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 10,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 11,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 12,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 13,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 14,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 15,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 16,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 17,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 18,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 19,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 20,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 21,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 22,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 23,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 24,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 25,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 26,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 27,
+        "key_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          14,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      }
+    ],
+    "all_logits_finite": true,
+    "next_token_ids_match": true,
+    "next_token_id": 311,
+    "max_abs_logit_difference": 0.0
+  },
+  "incremental_step": {
+    "on_input_tokens": 1,
+    "off_input_tokens": 15,
+    "cache_length_before": 14,
+    "cache_length_after": 15,
+    "cache_type": "DynamicCache",
+    "same_cache_object_reused": true,
+    "cached_prefix_preserved_exactly": true,
+    "off_past_key_values_is_none": true,
+    "layers": [
+      {
+        "layer": 0,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 1,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 2,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 3,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 4,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 5,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 6,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 7,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 8,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 9,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 10,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 11,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 12,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 13,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 14,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 15,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 16,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 17,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 18,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 19,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 20,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 21,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 22,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 23,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 24,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 25,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 26,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      },
+      {
+        "layer": 27,
+        "key_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "value_shape": [
+          1,
+          2,
+          15,
+          128
+        ],
+        "key_dtype": "torch.bfloat16",
+        "value_dtype": "torch.bfloat16",
+        "key_device": "cuda:0",
+        "value_device": "cuda:0",
+        "all_values_finite": true
+      }
+    ],
+    "all_logits_finite": true,
+    "next_token_ids_match": true,
+    "next_token_id": 1304,
+    "max_abs_logit_difference": 0.15625
+  },
+  "benchmark_performed": false,
+  "limitations": "Only prefill and one incremental step were checked. Full 128-token ON/OFF output equality and performance measurement are still pending."
+}

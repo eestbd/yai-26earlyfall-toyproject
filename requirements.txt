@@ -1,0 +1,15 @@
+# Use the existing VESSL Python 3.10.12 and PyTorch 2.3.1+cu121 environment.
+# Do not reinstall or upgrade PyTorch or CUDA packages.
+
+# Pinned experiment versions.
+transformers==4.46.3
+huggingface-hub==0.26.2
+safetensors==0.4.5
+numpy==1.26.4
+
+# Additional dependencies resolved during environment setup.
+tokenizers==0.20.3
+regex==2026.9.10
+
+# Optional model-loading support, validated with the existing VESSL environment.
+accelerate==0.34.2

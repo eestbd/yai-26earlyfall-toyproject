@@ -1,0 +1,93 @@
+{
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "resolved_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "source_url": "https://huggingface.co/Qwen/Qwen2.5-1.5B/tree/8faed761d45a263340a0528343f099c05c9a4323",
+  "local_path": "models/Qwen2.5-1.5B",
+  "storage_path": "/tmp/kv-cache-project-models/Qwen2.5-1.5B",
+  "storage_is_temporary": true,
+  "verified_at_utc": "2026-09-24T09:34:36.850231+00:00",
+  "huggingface_hub_version": "0.26.2",
+  "download_method": "snapshot_download with local_dir and explicit allow_patterns",
+  "total_size_bytes": 3098970704,
+  "files": [
+    {
+      "path": "LICENSE",
+      "size_bytes": 11343,
+      "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "6634c8cc3133b3848ec74b9f275acaaa1ea618ab",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 3850,
+      "sha256": "84cc3bdbfd781149913126b70981cf1e341176fe4bc9d878601a83f18b035ddf",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "b2861f7da85a5af5e321b57c7bbf98ae17255992",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "config.json",
+      "size_bytes": 684,
+      "sha256": "0e8c8aa86468aba09c9d32157ff4bc2301c7e6c50e4398960425b2ea71e66f77",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "169d606d5cf502a5628a52381586679a6d0caaab",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "generation_config.json",
+      "size_bytes": 138,
+      "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "cbbb3133034e192527e5321b4c679154e4819ab8",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "merges.txt",
+      "size_bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "20024bfe7c83998e9aeaf98a0cd6a2ce6306c2f0",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "model.safetensors",
+      "size_bytes": 3087467144,
+      "sha256": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+      "remote_hash_algorithm": "sha256",
+      "remote_hash": "a961db72e75d52b18e6b0c9d379e51a26973b233385e0e127fdda7d648aec796",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "tokenizer.json",
+      "size_bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "443909a61d429dff23010e5bddd28ff530edda00",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size_bytes": 7228,
+      "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "ba7e4c5637b9732dadcd66286ce48334e8b31e9e",
+      "remote_hash_verified": true
+    },
+    {
+      "path": "vocab.json",
+      "size_bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+      "remote_hash_algorithm": "git-blob-sha1",
+      "remote_hash": "4783fe10ac3adce15ac8f358ef5462739852c569",
+      "remote_hash_verified": true
+    }
+  ],
+  "validation": {
+    "exact_revision": true,
+    "all_sizes_and_remote_hashes_match": true,
+    "model_type": "qwen2",
+    "model_loaded": false
+  }
+}

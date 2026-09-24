@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "scope": "step_9_fixed_input_validation_only",
+  "recorded_at_utc": "2026-09-24T10:09:49.537891+00:00",
+  "python_version": "3.10.12",
+  "input_path": "data/shared_5_1_input.json",
+  "input_file_sha256": "3ad50063a444baa699fa977a54ffb138c65d68184fa845cd252c632f0846632c",
+  "validation_script_sha256": "46e77d82069d8ecc5f7cca95bf6c133b168cf6e0062446491dbc922250b8b1f4",
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "tokenizer_add_special_tokens": false,
+  "prompt_tokens": 128,
+  "min_token_id": 11,
+  "max_token_id": 58150,
+  "expected_token_ids_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+  "computed_token_ids_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+  "sha256_serialization": "json.dumps(token_ids).encode('utf-8')",
+  "reference_hash_matches": true,
+  "retokenization_performed": false,
+  "model_loaded": false,
+  "benchmark_performed": false
+}

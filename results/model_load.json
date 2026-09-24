@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "scope": "step_6_local_tokenizer_and_model_loading_only",
+  "recorded_at_utc": "2026-09-24T09:59:12.311312+00:00",
+  "model_id": "Qwen/Qwen2.5-1.5B",
+  "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+  "local_path": "models/Qwen2.5-1.5B",
+  "storage_path": "/tmp/kv-cache-project-models/Qwen2.5-1.5B",
+  "storage_is_temporary": true,
+  "source_metadata_sha256": "267dd5b3b9ca9f69fa4437a5fbe4de8f857abfc85663e5ee4c2de3ca2603bfac",
+  "validation_script_sha256": "a21fbc12a2a55b7eafc8ffbc42ccf266f81cf80d4e2220ca07eaf74680d57310",
+  "python_version": "3.10.12",
+  "packages": {
+    "torch": "2.3.1+cu121",
+    "transformers": "4.46.3",
+    "accelerate": "0.34.2",
+    "huggingface-hub": "0.26.2",
+    "safetensors": "0.4.5",
+    "numpy": "1.26.4"
+  },
+  "gpu_name": "NVIDIA GeForce RTX 3090",
+  "cuda_runtime": "12.1",
+  "cudnn_version": 8902,
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "tokenizer_size": 151665,
+  "embedding_vocabulary_size": 151936,
+  "model_class": "Qwen2ForCausalLM",
+  "parameter_count": 1543714304,
+  "parameter_bytes": 3087428608,
+  "parameter_devices": [
+    "cuda:0"
+  ],
+  "parameter_dtypes": [
+    "torch.bfloat16"
+  ],
+  "buffer_dtypes": [
+    "torch.float32"
+  ],
+  "eval_mode": true,
+  "attention_implementation": "eager",
+  "attention_classes": [
+    "Qwen2Attention"
+  ],
+  "quantized": false,
+  "seed": 42,
+  "tf32_matmul_allowed": false,
+  "local_files_only": true,
+  "generation_performed": false,
+  "limitations": "This validates loading only; forward, generation and KV Cache behavior are not yet tested."
+}
