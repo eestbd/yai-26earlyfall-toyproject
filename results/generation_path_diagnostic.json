@@ -1,0 +1,2159 @@
+{
+  "scope": "actual_generate_cache_path_diagnostic",
+  "status": "passed",
+  "recorded_at_utc": "2026-09-24T12:30:13.564157+00:00",
+  "config": {
+    "model_id": "Qwen/Qwen2.5-1.5B",
+    "model_revision": "8faed761d45a263340a0528343f099c05c9a4323",
+    "model_source_path": "docs/model_source.json",
+    "input_path": "data/shared_5_1_input.json",
+    "input_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+    "prompt_tokens": 128,
+    "batch_size": 1,
+    "tokenizer_add_special_tokens": false,
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "attention_implementation": "eager",
+    "seed": 42,
+    "allow_tf32": false,
+    "model_eval": true,
+    "inference_mode": true,
+    "quantization": null,
+    "offload": false,
+    "torch_compile": false,
+    "local_files_only": true,
+    "trust_remote_code": false,
+    "python_version": "3.10.12",
+    "package_versions": {
+      "torch": "2.3.1+cu121",
+      "transformers": "4.46.3",
+      "accelerate": "0.34.2",
+      "huggingface-hub": "0.26.2",
+      "safetensors": "0.4.5",
+      "numpy": "1.26.4"
+    },
+    "generation": {
+      "min_new_tokens": 128,
+      "max_new_tokens": 128,
+      "do_sample": false,
+      "num_beams": 1,
+      "num_return_sequences": 1,
+      "bos_token_id": 151643,
+      "eos_token_id": 151643,
+      "pad_token_id": 151643,
+      "return_dict_in_generate": false,
+      "output_scores": false,
+      "output_logits": false,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "remove_invalid_values": false
+    },
+    "use_cache_values": [
+      false,
+      true
+    ],
+    "warmup_runs_per_condition": 2,
+    "warmup_in_statistics": false,
+    "measurement_repeats_per_condition": 5,
+    "measurement_order": [
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ],
+      [
+        true,
+        false
+      ],
+      [
+        false,
+        true
+      ]
+    ]
+  },
+  "performance_measurement": false,
+  "script_sha256": "ec5475b586d74d87740fd23aa0c90ff41ab9273cdbf4e30067ebad1535a32807",
+  "reference_sha256": "e6e8d3e2d9a99c4ea9c310d63314bd77feace69c94d8bfa088612c917ff9d09d",
+  "runs": [
+    {
+      "use_cache": false,
+      "forward_steps": [
+        {
+          "step": 0,
+          "input_tokens": 128,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 1,
+          "input_tokens": 129,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 2,
+          "input_tokens": 130,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 3,
+          "input_tokens": 131,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 4,
+          "input_tokens": 132,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 5,
+          "input_tokens": 133,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 6,
+          "input_tokens": 134,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 7,
+          "input_tokens": 135,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 8,
+          "input_tokens": 136,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 9,
+          "input_tokens": 137,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 10,
+          "input_tokens": 138,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 11,
+          "input_tokens": 139,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 12,
+          "input_tokens": 140,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 13,
+          "input_tokens": 141,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 14,
+          "input_tokens": 142,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 15,
+          "input_tokens": 143,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 16,
+          "input_tokens": 144,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 17,
+          "input_tokens": 145,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 18,
+          "input_tokens": 146,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 19,
+          "input_tokens": 147,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 20,
+          "input_tokens": 148,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 21,
+          "input_tokens": 149,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 22,
+          "input_tokens": 150,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 23,
+          "input_tokens": 151,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 24,
+          "input_tokens": 152,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 25,
+          "input_tokens": 153,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 26,
+          "input_tokens": 154,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 27,
+          "input_tokens": 155,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 28,
+          "input_tokens": 156,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 29,
+          "input_tokens": 157,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 30,
+          "input_tokens": 158,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 31,
+          "input_tokens": 159,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 32,
+          "input_tokens": 160,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 33,
+          "input_tokens": 161,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 34,
+          "input_tokens": 162,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 35,
+          "input_tokens": 163,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 36,
+          "input_tokens": 164,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 37,
+          "input_tokens": 165,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 38,
+          "input_tokens": 166,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 39,
+          "input_tokens": 167,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 40,
+          "input_tokens": 168,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 41,
+          "input_tokens": 169,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 42,
+          "input_tokens": 170,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 43,
+          "input_tokens": 171,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 44,
+          "input_tokens": 172,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 45,
+          "input_tokens": 173,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 46,
+          "input_tokens": 174,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 47,
+          "input_tokens": 175,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 48,
+          "input_tokens": 176,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 49,
+          "input_tokens": 177,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 50,
+          "input_tokens": 178,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 51,
+          "input_tokens": 179,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 52,
+          "input_tokens": 180,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 53,
+          "input_tokens": 181,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 54,
+          "input_tokens": 182,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 55,
+          "input_tokens": 183,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 56,
+          "input_tokens": 184,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 57,
+          "input_tokens": 185,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 58,
+          "input_tokens": 186,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 59,
+          "input_tokens": 187,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 60,
+          "input_tokens": 188,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 61,
+          "input_tokens": 189,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 62,
+          "input_tokens": 190,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 63,
+          "input_tokens": 191,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 64,
+          "input_tokens": 192,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 65,
+          "input_tokens": 193,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 66,
+          "input_tokens": 194,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 67,
+          "input_tokens": 195,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 68,
+          "input_tokens": 196,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 69,
+          "input_tokens": 197,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 70,
+          "input_tokens": 198,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 71,
+          "input_tokens": 199,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 72,
+          "input_tokens": 200,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 73,
+          "input_tokens": 201,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 74,
+          "input_tokens": 202,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 75,
+          "input_tokens": 203,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 76,
+          "input_tokens": 204,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 77,
+          "input_tokens": 205,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 78,
+          "input_tokens": 206,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 79,
+          "input_tokens": 207,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 80,
+          "input_tokens": 208,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 81,
+          "input_tokens": 209,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 82,
+          "input_tokens": 210,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 83,
+          "input_tokens": 211,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 84,
+          "input_tokens": 212,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 85,
+          "input_tokens": 213,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 86,
+          "input_tokens": 214,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 87,
+          "input_tokens": 215,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 88,
+          "input_tokens": 216,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 89,
+          "input_tokens": 217,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 90,
+          "input_tokens": 218,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 91,
+          "input_tokens": 219,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 92,
+          "input_tokens": 220,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 93,
+          "input_tokens": 221,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 94,
+          "input_tokens": 222,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 95,
+          "input_tokens": 223,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 96,
+          "input_tokens": 224,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 97,
+          "input_tokens": 225,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 98,
+          "input_tokens": 226,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 99,
+          "input_tokens": 227,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 100,
+          "input_tokens": 228,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 101,
+          "input_tokens": 229,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 102,
+          "input_tokens": 230,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 103,
+          "input_tokens": 231,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 104,
+          "input_tokens": 232,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 105,
+          "input_tokens": 233,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 106,
+          "input_tokens": 234,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 107,
+          "input_tokens": 235,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 108,
+          "input_tokens": 236,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 109,
+          "input_tokens": 237,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 110,
+          "input_tokens": 238,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 111,
+          "input_tokens": 239,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 112,
+          "input_tokens": 240,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 113,
+          "input_tokens": 241,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 114,
+          "input_tokens": 242,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 115,
+          "input_tokens": 243,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 116,
+          "input_tokens": 244,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 117,
+          "input_tokens": 245,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 118,
+          "input_tokens": 246,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 119,
+          "input_tokens": 247,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 120,
+          "input_tokens": 248,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 121,
+          "input_tokens": 249,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 122,
+          "input_tokens": 250,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 123,
+          "input_tokens": 251,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 124,
+          "input_tokens": 252,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 125,
+          "input_tokens": 253,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 126,
+          "input_tokens": 254,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        },
+        {
+          "step": 127,
+          "input_tokens": 255,
+          "forward_use_cache": false,
+          "incoming_cache_length": 0,
+          "output_cache_present": false,
+          "output_cache_length": 0
+        }
+      ],
+      "final_cache_layers": 0,
+      "final_first_key_shape": null,
+      "final_cache_tensor_bytes": 0,
+      "matches_pilot_output": true,
+      "status": "passed"
+    },
+    {
+      "use_cache": true,
+      "forward_steps": [
+        {
+          "step": 0,
+          "input_tokens": 128,
+          "forward_use_cache": true,
+          "incoming_cache_length": 0,
+          "output_cache_present": true,
+          "output_cache_length": 128
+        },
+        {
+          "step": 1,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 128,
+          "output_cache_present": true,
+          "output_cache_length": 129
+        },
+        {
+          "step": 2,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 129,
+          "output_cache_present": true,
+          "output_cache_length": 130
+        },
+        {
+          "step": 3,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 130,
+          "output_cache_present": true,
+          "output_cache_length": 131
+        },
+        {
+          "step": 4,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 131,
+          "output_cache_present": true,
+          "output_cache_length": 132
+        },
+        {
+          "step": 5,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 132,
+          "output_cache_present": true,
+          "output_cache_length": 133
+        },
+        {
+          "step": 6,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 133,
+          "output_cache_present": true,
+          "output_cache_length": 134
+        },
+        {
+          "step": 7,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 134,
+          "output_cache_present": true,
+          "output_cache_length": 135
+        },
+        {
+          "step": 8,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 135,
+          "output_cache_present": true,
+          "output_cache_length": 136
+        },
+        {
+          "step": 9,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 136,
+          "output_cache_present": true,
+          "output_cache_length": 137
+        },
+        {
+          "step": 10,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 137,
+          "output_cache_present": true,
+          "output_cache_length": 138
+        },
+        {
+          "step": 11,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 138,
+          "output_cache_present": true,
+          "output_cache_length": 139
+        },
+        {
+          "step": 12,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 139,
+          "output_cache_present": true,
+          "output_cache_length": 140
+        },
+        {
+          "step": 13,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 140,
+          "output_cache_present": true,
+          "output_cache_length": 141
+        },
+        {
+          "step": 14,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 141,
+          "output_cache_present": true,
+          "output_cache_length": 142
+        },
+        {
+          "step": 15,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 142,
+          "output_cache_present": true,
+          "output_cache_length": 143
+        },
+        {
+          "step": 16,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 143,
+          "output_cache_present": true,
+          "output_cache_length": 144
+        },
+        {
+          "step": 17,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 144,
+          "output_cache_present": true,
+          "output_cache_length": 145
+        },
+        {
+          "step": 18,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 145,
+          "output_cache_present": true,
+          "output_cache_length": 146
+        },
+        {
+          "step": 19,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 146,
+          "output_cache_present": true,
+          "output_cache_length": 147
+        },
+        {
+          "step": 20,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 147,
+          "output_cache_present": true,
+          "output_cache_length": 148
+        },
+        {
+          "step": 21,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 148,
+          "output_cache_present": true,
+          "output_cache_length": 149
+        },
+        {
+          "step": 22,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 149,
+          "output_cache_present": true,
+          "output_cache_length": 150
+        },
+        {
+          "step": 23,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 150,
+          "output_cache_present": true,
+          "output_cache_length": 151
+        },
+        {
+          "step": 24,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 151,
+          "output_cache_present": true,
+          "output_cache_length": 152
+        },
+        {
+          "step": 25,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 152,
+          "output_cache_present": true,
+          "output_cache_length": 153
+        },
+        {
+          "step": 26,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 153,
+          "output_cache_present": true,
+          "output_cache_length": 154
+        },
+        {
+          "step": 27,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 154,
+          "output_cache_present": true,
+          "output_cache_length": 155
+        },
+        {
+          "step": 28,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 155,
+          "output_cache_present": true,
+          "output_cache_length": 156
+        },
+        {
+          "step": 29,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 156,
+          "output_cache_present": true,
+          "output_cache_length": 157
+        },
+        {
+          "step": 30,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 157,
+          "output_cache_present": true,
+          "output_cache_length": 158
+        },
+        {
+          "step": 31,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 158,
+          "output_cache_present": true,
+          "output_cache_length": 159
+        },
+        {
+          "step": 32,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 159,
+          "output_cache_present": true,
+          "output_cache_length": 160
+        },
+        {
+          "step": 33,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 160,
+          "output_cache_present": true,
+          "output_cache_length": 161
+        },
+        {
+          "step": 34,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 161,
+          "output_cache_present": true,
+          "output_cache_length": 162
+        },
+        {
+          "step": 35,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 162,
+          "output_cache_present": true,
+          "output_cache_length": 163
+        },
+        {
+          "step": 36,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 163,
+          "output_cache_present": true,
+          "output_cache_length": 164
+        },
+        {
+          "step": 37,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 164,
+          "output_cache_present": true,
+          "output_cache_length": 165
+        },
+        {
+          "step": 38,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 165,
+          "output_cache_present": true,
+          "output_cache_length": 166
+        },
+        {
+          "step": 39,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 166,
+          "output_cache_present": true,
+          "output_cache_length": 167
+        },
+        {
+          "step": 40,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 167,
+          "output_cache_present": true,
+          "output_cache_length": 168
+        },
+        {
+          "step": 41,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 168,
+          "output_cache_present": true,
+          "output_cache_length": 169
+        },
+        {
+          "step": 42,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 169,
+          "output_cache_present": true,
+          "output_cache_length": 170
+        },
+        {
+          "step": 43,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 170,
+          "output_cache_present": true,
+          "output_cache_length": 171
+        },
+        {
+          "step": 44,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 171,
+          "output_cache_present": true,
+          "output_cache_length": 172
+        },
+        {
+          "step": 45,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 172,
+          "output_cache_present": true,
+          "output_cache_length": 173
+        },
+        {
+          "step": 46,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 173,
+          "output_cache_present": true,
+          "output_cache_length": 174
+        },
+        {
+          "step": 47,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 174,
+          "output_cache_present": true,
+          "output_cache_length": 175
+        },
+        {
+          "step": 48,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 175,
+          "output_cache_present": true,
+          "output_cache_length": 176
+        },
+        {
+          "step": 49,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 176,
+          "output_cache_present": true,
+          "output_cache_length": 177
+        },
+        {
+          "step": 50,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 177,
+          "output_cache_present": true,
+          "output_cache_length": 178
+        },
+        {
+          "step": 51,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 178,
+          "output_cache_present": true,
+          "output_cache_length": 179
+        },
+        {
+          "step": 52,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 179,
+          "output_cache_present": true,
+          "output_cache_length": 180
+        },
+        {
+          "step": 53,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 180,
+          "output_cache_present": true,
+          "output_cache_length": 181
+        },
+        {
+          "step": 54,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 181,
+          "output_cache_present": true,
+          "output_cache_length": 182
+        },
+        {
+          "step": 55,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 182,
+          "output_cache_present": true,
+          "output_cache_length": 183
+        },
+        {
+          "step": 56,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 183,
+          "output_cache_present": true,
+          "output_cache_length": 184
+        },
+        {
+          "step": 57,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 184,
+          "output_cache_present": true,
+          "output_cache_length": 185
+        },
+        {
+          "step": 58,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 185,
+          "output_cache_present": true,
+          "output_cache_length": 186
+        },
+        {
+          "step": 59,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 186,
+          "output_cache_present": true,
+          "output_cache_length": 187
+        },
+        {
+          "step": 60,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 187,
+          "output_cache_present": true,
+          "output_cache_length": 188
+        },
+        {
+          "step": 61,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 188,
+          "output_cache_present": true,
+          "output_cache_length": 189
+        },
+        {
+          "step": 62,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 189,
+          "output_cache_present": true,
+          "output_cache_length": 190
+        },
+        {
+          "step": 63,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 190,
+          "output_cache_present": true,
+          "output_cache_length": 191
+        },
+        {
+          "step": 64,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 191,
+          "output_cache_present": true,
+          "output_cache_length": 192
+        },
+        {
+          "step": 65,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 192,
+          "output_cache_present": true,
+          "output_cache_length": 193
+        },
+        {
+          "step": 66,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 193,
+          "output_cache_present": true,
+          "output_cache_length": 194
+        },
+        {
+          "step": 67,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 194,
+          "output_cache_present": true,
+          "output_cache_length": 195
+        },
+        {
+          "step": 68,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 195,
+          "output_cache_present": true,
+          "output_cache_length": 196
+        },
+        {
+          "step": 69,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 196,
+          "output_cache_present": true,
+          "output_cache_length": 197
+        },
+        {
+          "step": 70,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 197,
+          "output_cache_present": true,
+          "output_cache_length": 198
+        },
+        {
+          "step": 71,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 198,
+          "output_cache_present": true,
+          "output_cache_length": 199
+        },
+        {
+          "step": 72,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 199,
+          "output_cache_present": true,
+          "output_cache_length": 200
+        },
+        {
+          "step": 73,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 200,
+          "output_cache_present": true,
+          "output_cache_length": 201
+        },
+        {
+          "step": 74,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 201,
+          "output_cache_present": true,
+          "output_cache_length": 202
+        },
+        {
+          "step": 75,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 202,
+          "output_cache_present": true,
+          "output_cache_length": 203
+        },
+        {
+          "step": 76,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 203,
+          "output_cache_present": true,
+          "output_cache_length": 204
+        },
+        {
+          "step": 77,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 204,
+          "output_cache_present": true,
+          "output_cache_length": 205
+        },
+        {
+          "step": 78,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 205,
+          "output_cache_present": true,
+          "output_cache_length": 206
+        },
+        {
+          "step": 79,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 206,
+          "output_cache_present": true,
+          "output_cache_length": 207
+        },
+        {
+          "step": 80,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 207,
+          "output_cache_present": true,
+          "output_cache_length": 208
+        },
+        {
+          "step": 81,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 208,
+          "output_cache_present": true,
+          "output_cache_length": 209
+        },
+        {
+          "step": 82,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 209,
+          "output_cache_present": true,
+          "output_cache_length": 210
+        },
+        {
+          "step": 83,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 210,
+          "output_cache_present": true,
+          "output_cache_length": 211
+        },
+        {
+          "step": 84,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 211,
+          "output_cache_present": true,
+          "output_cache_length": 212
+        },
+        {
+          "step": 85,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 212,
+          "output_cache_present": true,
+          "output_cache_length": 213
+        },
+        {
+          "step": 86,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 213,
+          "output_cache_present": true,
+          "output_cache_length": 214
+        },
+        {
+          "step": 87,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 214,
+          "output_cache_present": true,
+          "output_cache_length": 215
+        },
+        {
+          "step": 88,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 215,
+          "output_cache_present": true,
+          "output_cache_length": 216
+        },
+        {
+          "step": 89,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 216,
+          "output_cache_present": true,
+          "output_cache_length": 217
+        },
+        {
+          "step": 90,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 217,
+          "output_cache_present": true,
+          "output_cache_length": 218
+        },
+        {
+          "step": 91,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 218,
+          "output_cache_present": true,
+          "output_cache_length": 219
+        },
+        {
+          "step": 92,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 219,
+          "output_cache_present": true,
+          "output_cache_length": 220
+        },
+        {
+          "step": 93,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 220,
+          "output_cache_present": true,
+          "output_cache_length": 221
+        },
+        {
+          "step": 94,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 221,
+          "output_cache_present": true,
+          "output_cache_length": 222
+        },
+        {
+          "step": 95,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 222,
+          "output_cache_present": true,
+          "output_cache_length": 223
+        },
+        {
+          "step": 96,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 223,
+          "output_cache_present": true,
+          "output_cache_length": 224
+        },
+        {
+          "step": 97,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 224,
+          "output_cache_present": true,
+          "output_cache_length": 225
+        },
+        {
+          "step": 98,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 225,
+          "output_cache_present": true,
+          "output_cache_length": 226
+        },
+        {
+          "step": 99,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 226,
+          "output_cache_present": true,
+          "output_cache_length": 227
+        },
+        {
+          "step": 100,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 227,
+          "output_cache_present": true,
+          "output_cache_length": 228
+        },
+        {
+          "step": 101,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 228,
+          "output_cache_present": true,
+          "output_cache_length": 229
+        },
+        {
+          "step": 102,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 229,
+          "output_cache_present": true,
+          "output_cache_length": 230
+        },
+        {
+          "step": 103,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 230,
+          "output_cache_present": true,
+          "output_cache_length": 231
+        },
+        {
+          "step": 104,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 231,
+          "output_cache_present": true,
+          "output_cache_length": 232
+        },
+        {
+          "step": 105,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 232,
+          "output_cache_present": true,
+          "output_cache_length": 233
+        },
+        {
+          "step": 106,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 233,
+          "output_cache_present": true,
+          "output_cache_length": 234
+        },
+        {
+          "step": 107,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 234,
+          "output_cache_present": true,
+          "output_cache_length": 235
+        },
+        {
+          "step": 108,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 235,
+          "output_cache_present": true,
+          "output_cache_length": 236
+        },
+        {
+          "step": 109,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 236,
+          "output_cache_present": true,
+          "output_cache_length": 237
+        },
+        {
+          "step": 110,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 237,
+          "output_cache_present": true,
+          "output_cache_length": 238
+        },
+        {
+          "step": 111,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 238,
+          "output_cache_present": true,
+          "output_cache_length": 239
+        },
+        {
+          "step": 112,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 239,
+          "output_cache_present": true,
+          "output_cache_length": 240
+        },
+        {
+          "step": 113,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 240,
+          "output_cache_present": true,
+          "output_cache_length": 241
+        },
+        {
+          "step": 114,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 241,
+          "output_cache_present": true,
+          "output_cache_length": 242
+        },
+        {
+          "step": 115,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 242,
+          "output_cache_present": true,
+          "output_cache_length": 243
+        },
+        {
+          "step": 116,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 243,
+          "output_cache_present": true,
+          "output_cache_length": 244
+        },
+        {
+          "step": 117,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 244,
+          "output_cache_present": true,
+          "output_cache_length": 245
+        },
+        {
+          "step": 118,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 245,
+          "output_cache_present": true,
+          "output_cache_length": 246
+        },
+        {
+          "step": 119,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 246,
+          "output_cache_present": true,
+          "output_cache_length": 247
+        },
+        {
+          "step": 120,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 247,
+          "output_cache_present": true,
+          "output_cache_length": 248
+        },
+        {
+          "step": 121,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 248,
+          "output_cache_present": true,
+          "output_cache_length": 249
+        },
+        {
+          "step": 122,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 249,
+          "output_cache_present": true,
+          "output_cache_length": 250
+        },
+        {
+          "step": 123,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 250,
+          "output_cache_present": true,
+          "output_cache_length": 251
+        },
+        {
+          "step": 124,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 251,
+          "output_cache_present": true,
+          "output_cache_length": 252
+        },
+        {
+          "step": 125,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 252,
+          "output_cache_present": true,
+          "output_cache_length": 253
+        },
+        {
+          "step": 126,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 253,
+          "output_cache_present": true,
+          "output_cache_length": 254
+        },
+        {
+          "step": 127,
+          "input_tokens": 1,
+          "forward_use_cache": true,
+          "incoming_cache_length": 254,
+          "output_cache_present": true,
+          "output_cache_length": 255
+        }
+      ],
+      "final_cache_layers": 28,
+      "final_first_key_shape": [
+        1,
+        2,
+        255,
+        128
+      ],
+      "final_cache_tensor_bytes": 7311360,
+      "matches_pilot_output": true,
+      "status": "passed"
+    }
+  ]
+}

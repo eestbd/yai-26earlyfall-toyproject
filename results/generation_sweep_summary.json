@@ -1,0 +1,563 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-09-24T12:47:24.031514+00:00",
+  "raw_path": "results/generation_sweep_raw.json",
+  "raw_sha256": "c4ce9c0bdd522373909d9393f7fa87b8dc70c3525bd88c244ae0ac576a9099d6",
+  "script_sha256": "ce0131a7a1951fb3e28674f53da5487dfcd0b18f1a473f5b39fbfd98e3818207",
+  "sample_std_ddof": 1,
+  "outliers_removed": false,
+  "warmups_excluded": 16,
+  "measured_runs": 40,
+  "prompt_tokens": 128,
+  "generation_lengths": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "conditions": [
+    {
+      "prompt_tokens": 128,
+      "generation_tokens": 32,
+      "input_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+      "statistics": {
+        "OFF": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 0.7978459175676107,
+            "std": 0.0016217639581909873
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 40.1081274392232,
+            "std": 0.0814997800711842
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3313500160,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3108743168,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3313500160,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 11860480,
+            "std": 0.0
+          }
+        },
+        "ON": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 0.8031802659854292,
+            "std": 0.0023277323020979572
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 39.841883741024965,
+            "std": 0.11533790899695244
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3313500160,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3109110272,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3313500160,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 12227584,
+            "std": 0.0
+          }
+        }
+      },
+      "all_generated_token_ids_equal": true,
+      "output_comparisons": [
+        {
+          "execution_index": 0,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 1,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 2,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 3,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 4,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 5,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 6,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 7,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 8,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 9,
+          "equal": true,
+          "first_mismatch": null
+        }
+      ],
+      "speedup": 0.9933584667804634
+    },
+    {
+      "prompt_tokens": 128,
+      "generation_tokens": 64,
+      "input_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+      "statistics": {
+        "OFF": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 1.60404960969463,
+            "std": 0.0022159541427722207
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 39.89907632162788,
+            "std": 0.0551686456283794
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3315597312,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3110895616,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3315597312,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 14012928,
+            "std": 0.0
+          }
+        },
+        "ON": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 1.6092736476100982,
+            "std": 0.008099548722144977
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 39.77029908900356,
+            "std": 0.1997471169049302
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3315597312,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3109110272,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3315597312,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 12227584,
+            "std": 0.0
+          }
+        }
+      },
+      "all_generated_token_ids_equal": true,
+      "output_comparisons": [
+        {
+          "execution_index": 0,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 1,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 2,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 3,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 4,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 5,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 6,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 7,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 8,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 9,
+          "equal": true,
+          "first_mismatch": null
+        }
+      ],
+      "speedup": 0.9967537914243322
+    },
+    {
+      "prompt_tokens": 128,
+      "generation_tokens": 128,
+      "input_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+      "statistics": {
+        "OFF": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 3.2090554707683623,
+            "std": 0.0020264628644556006
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 39.88713876263969,
+            "std": 0.025203736745924066
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3338665984,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3115215360,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3338665984,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 18332672,
+            "std": 0.0
+          }
+        },
+        "ON": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 3.2159238735213878,
+            "std": 0.0036818111520439695
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 39.80197895003314,
+            "std": 0.04560216450983274
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3338665984,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3109535744,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3338665984,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 12653056,
+            "std": 0.0
+          }
+        }
+      },
+      "all_generated_token_ids_equal": true,
+      "output_comparisons": [
+        {
+          "execution_index": 0,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 1,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 2,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 3,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 4,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 5,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 6,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 7,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 8,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 9,
+          "equal": true,
+          "first_mismatch": null
+        }
+      ],
+      "speedup": 0.9978642520708972
+    },
+    {
+      "prompt_tokens": 128,
+      "generation_tokens": 256,
+      "input_sha256": "5fcc0f299f56df0dcefe9385960670e79276e2727011ef96bb0654b06186fa34",
+      "statistics": {
+        "OFF": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 6.572500033210963,
+            "std": 0.032812013061482015
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 38.9509433961771,
+            "std": 0.19340436548851844
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3340763136,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3127221248,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3340763136,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 30338560,
+            "std": 0.0
+          }
+        },
+        "ON": {
+          "total_latency_seconds": {
+            "n": 5,
+            "mean": 6.4250966118648645,
+            "std": 0.016369656373057255
+          },
+          "throughput_tokens_per_second": {
+            "n": 5,
+            "mean": 39.84396625151555,
+            "std": 0.10175594299071539
+          },
+          "baseline_allocated_bytes": {
+            "n": 5,
+            "mean": 3096882688,
+            "std": 0.0
+          },
+          "baseline_reserved_bytes": {
+            "n": 5,
+            "mean": 3340763136,
+            "std": 0.0
+          },
+          "peak_allocated_bytes": {
+            "n": 5,
+            "mean": 3113208832,
+            "std": 0.0
+          },
+          "peak_reserved_bytes": {
+            "n": 5,
+            "mean": 3340763136,
+            "std": 0.0
+          },
+          "peak_allocated_above_baseline_bytes": {
+            "n": 5,
+            "mean": 16326144,
+            "std": 0.0
+          }
+        }
+      },
+      "all_generated_token_ids_equal": true,
+      "output_comparisons": [
+        {
+          "execution_index": 0,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 1,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 2,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 3,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 4,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 5,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 6,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 7,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 8,
+          "equal": true,
+          "first_mismatch": null
+        },
+        {
+          "execution_index": 9,
+          "equal": true,
+          "first_mismatch": null
+        }
+      ],
+      "speedup": 1.0229418217733717
+    }
+  ],
+  "all_conditions_outputs_equal": true,
+  "comparison_caveat": null,
+  "csv_sha256": "608ed562a05aec1adbd263cd19db4fce84a114bd32dd72478ad074af63f8ead4"
+}

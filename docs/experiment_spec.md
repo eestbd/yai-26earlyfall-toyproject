@@ -159,7 +159,7 @@
 Speedup은 **0.992208×**로, 이번 128-input/128-generation 조건에서는 속도 향상이 관측되지 않았다.
 이는 각 조건 5회에 대한 기술 통계이며, 성능 차이의 통계적 유의성이나 다른 길이에서의 성능을 주장하지 않는다.
 Peak allocated 차이를 KV Cache 자체 크기로 해석하지 않는다.
-18단계 확장 실험은 아직 수행하지 않았다. 그래프와 Git 백업 범위는 아래 17단계를 참고한다.
+파일럿 그래프와 Git 백업 범위는 아래 17단계, 첫 길이 확장 조건은 18단계를 참고한다.
 
 ## 그래프와 Git 백업 (17단계)
 
@@ -173,6 +173,31 @@ Peak allocated 차이를 KV Cache 자체 크기로 해석하지 않는다.
 - 백업 범위: 실험 코드·규격·환경 기록·고정 입력·측정/검증 CSV·JSON·PNG/PDF.
   모델 가중치·cache·가상환경은 `.gitignore`로 제외한다.
 - 원격 백업은 `origin/main`으로 push가 성공하고 remote commit과 로컬 HEAD가 일치할 때 완료된다.
+
+## Prompt length sweep (18단계, 첫 확장)
+
+- 사용자 승인으로 generation=128을 유지한 prompt 128·256·512·1024 sweep을 진행한다.
+- 세부 조건·입력 구성·실행 명령·해석 범위는 [prompt_sweep.md](prompt_sweep.md)를 따른다.
+- 기존 고정 IDs를 반복한 길이별 입력과 해시를 별도 파일에 저장한다.
+- 같은 모델·프로세스에서 길이마다 warm-up 4회, 본측정 10회로 총 40개 표본을 얻는다.
+- 파일럿과 별도의 raw CSV/JSON·summary·그래프를 생성한다.
+- Prefill/decode 분리나 generation length sweep은 이번 확장에 포함하지 않는다.
+
+## Generation length sweep (18단계, 두 번째 확장)
+
+- 입력 128개를 유지하고 생성 길이 32·64·128·256을 비교한다.
+- 별도 설정의 min/max new tokens를 해당 길이로 고정하며, 각 조건 warm-up 2회·본측정 5회를 유지한다.
+- 세부 조건·시간 측정 경계·메모리 정의·출력 검증·재현 명령은 [generation_sweep.md](generation_sweep.md)를 따른다.
+- 이전 파일럿과 prompt sweep 결과는 보존하며, generation sweep 전용 CSV·JSON·PNG/PDF를 저장한다.
+- Prefill/decode 분리 및 최종 KV tensor 크기 sweep은 아직 수행하지 않는다.
+
+## 두 sweep의 6개 지표 확장
+
+- 사용자 요청으로 prefill/decode/total latency, decode throughput, peak allocated, actual KV tensor size를 측정한다.
+- 동일한 수동 greedy 루프로 두 sweep을 새로 실행하며 기존 generate 전체 시간 표본은 보존한다.
+- Prefill에는 첫 token 생성, decode에는 나머지 N−1개 token을 포함한다. 실제 KV는 모든 layer의 K/V tensor를 합산한다.
+- 측정 경계·입력 구성·기존 출력과의 대조·재현 방법은 [detailed_sweeps.md](detailed_sweeps.md)를 기준으로 한다.
+- 앞선 단계의 “분리 측정 미수행”은 해당 단계 당시의 상태이며, 이번 확장부터 별도 파일로 측정한다.
 
 ## 변경 근거와 검증 기록
 

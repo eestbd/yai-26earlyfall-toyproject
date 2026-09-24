@@ -1,0 +1,10 @@
+{
+  "recorded_at_utc": "2026-09-24T12:38:11.548869+00:00",
+  "matplotlib_version": "3.9.2",
+  "script_sha256": "c1bc18db99227304085a9fa655b06d92d469c858b3891ea4534e6cd166d1f466",
+  "summary_sha256": "b90b886243816972e9f51e52f3d8f6b9c8d18dd893aea5520ea3a6e9b17edf74",
+  "outputs": {
+    "plots/prompt_sweep.png": "5d3b08ed82a1ac324ee937cfb68982424505c590dc7be5cb267507df18d459d2",
+    "plots/prompt_sweep.pdf": "8707b37217afc904a3a111c6ed09bbcdca2b0a0c023b08bc33a3c7b3d6771814"
+  }
+}

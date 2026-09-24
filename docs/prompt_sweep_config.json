@@ -1,0 +1,18 @@
+{
+  "base_config_path": "docs/pilot_config.json",
+  "base_config_sha256": "26ce6ff6b48c66864fb24fc76b9980c697770f39e9b66a36e8cfba9d9ff4a653",
+  "input_manifest_path": "data/prompt_sweep_inputs.json",
+  "input_manifest_sha256": "c765a2a6f203d52e52696c4b7b5e6751dc79c0bc9b0713087b776f7aee5e2960",
+  "prompt_lengths": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "length_order": "ascending",
+  "generation_tokens": 128,
+  "warmup_runs_per_condition_per_length": 2,
+  "measurement_repeats_per_condition_per_length": 5,
+  "synthetic_repeated_input": true,
+  "empty_cache_between_runs_or_lengths": false
+}

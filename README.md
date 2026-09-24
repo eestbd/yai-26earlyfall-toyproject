@@ -59,4 +59,32 @@ python -B src/plot_pilot.py
 - [환경 기록](results/environment_setup.json), [패키지 버전 고정](requirements.txt), [그래프 출처·버전](results/plot_metadata.json)
 
 단계별 중간 기록은 `results/`에 보존합니다. 최종 통계는 **15단계 `pilot_memory.json`의 10개 표본만** 사용합니다.
-다음 확장 후보는 prompt/generation 길이 sweep, prefill/decode 분리 측정이며 아직 실행하지 않았습니다.
+첫 확장은 generation=128에서 prompt 길이 128·256·512·1024를 비교하는 실험입니다.
+[확장 규격과 실행 명령](docs/prompt_sweep.md)을 참고하세요. 생성 길이 32·64·128·256의 후속 실험 조건은 [generation sweep 문서](docs/generation_sweep.md)를 참고하세요. Prefill/decode 분리와 actual KV 측정은 아래 6개 지표 확장에서 별도로 다룹니다.
+
+## 입력 길이 확장 결과
+
+생성 길이를 128로 유지한 sweep에서 입력 128·256·512·1024의 latency speedup은 각각
+**0.996× · 1.039× · 1.793× · 3.311×**였습니다. 길이별 10회 출력 token IDs는 모두 일치했습니다.
+
+![입력 길이 sweep](plots/prompt_sweep.png)
+
+[조건과 상세 결과](docs/prompt_sweep.md) · [Raw CSV](results/prompt_sweep_raw.csv) · [통계 JSON](results/prompt_sweep_summary.json)
+
+## 생성 길이 확장 결과
+
+입력 128개를 고정하고 생성 길이를 32·64·128·256으로 바꾼 결과, latency speedup은 각각
+**0.993× · 0.997× · 0.998× · 1.023×**였습니다. 각 길이에서 ON/OFF 출력 token IDs는 모두 일치했습니다.
+32–128개에서는 시간이 비슷했고, 256개에서 ON의 평균 시간이 약간 짧았습니다.
+
+![생성 길이 sweep](plots/generation_sweep.png)
+
+[조건과 상세 결과](docs/generation_sweep.md) · [Raw CSV](results/generation_sweep_raw.csv) · [통계 JSON](results/generation_sweep_summary.json)
+
+## 두 sweep의 6개 지표
+
+Prefill/decode/total latency, decode throughput, peak allocated memory, 실제 K/V tensor 크기를
+수동 greedy 루프로 새로 측정합니다. Prefill은 첫 token까지, decode는 나머지 N−1개 token입니다.
+기존 generate 기반 전체 latency 결과와는 별도 표본입니다.
+
+[정의·방법·재현 명령](docs/detailed_sweeps.md) · [측정 설정](docs/detailed_sweeps_config.json)

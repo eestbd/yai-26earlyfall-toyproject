@@ -1,0 +1,47 @@
+{
+  "base_config_path": "docs/pilot_config.json",
+  "fixed_input_path": "data/shared_5_1_input.json",
+  "prompt_input_manifest_path": "data/prompt_sweep_inputs.json",
+  "reference_results": {
+    "prompt": "results/prompt_sweep_raw.json",
+    "generation": "results/generation_sweep_raw.json"
+  },
+  "input_file_sha256": {
+    "docs/pilot_config.json": "26ce6ff6b48c66864fb24fc76b9980c697770f39e9b66a36e8cfba9d9ff4a653",
+    "data/shared_5_1_input.json": "3ad50063a444baa699fa977a54ffb138c65d68184fa845cd252c632f0846632c",
+    "data/prompt_sweep_inputs.json": "c765a2a6f203d52e52696c4b7b5e6751dc79c0bc9b0713087b776f7aee5e2960",
+    "results/prompt_sweep_raw.json": "dc09c46e17cde4eb2a50965d0ea51cc8a754326b35c8653a6992314e5da4b376",
+    "results/generation_sweep_raw.json": "c4ce9c0bdd522373909d9393f7fa87b8dc70c3525bd88c244ae0ac576a9099d6"
+  },
+  "prompt_lengths": [
+    128,
+    256,
+    512,
+    1024
+  ],
+  "prompt_sweep_generation_tokens": 128,
+  "generation_lengths": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "generation_sweep_prompt_tokens": 128,
+  "warmup_runs_per_condition": 2,
+  "measurement_repeats_per_condition": 5,
+  "sweep_order": [
+    "prompt",
+    "generation"
+  ],
+  "length_order": "ascending",
+  "engine": "manual greedy autoregressive forward loop",
+  "prefill_definition": "prompt forward, first-token selection, output/cache capture and sequence bookkeeping, then CUDA synchronize",
+  "decode_definition": "remaining N-1 tokens, including forward, selection and sequence bookkeeping, then CUDA synchronize",
+  "total_definition": "contiguous wall-clock interval covering prefill and decode; includes phase-boundary synchronization",
+  "decode_throughput_definition": "(actual_generated_tokens - 1) / decode_seconds",
+  "kv_size_definition": "sum of numel * element_size over final retained K and V tensors, excluding allocator overhead",
+  "kv_final_cached_tokens": "prompt_tokens + actual_generated_tokens - 1",
+  "empty_cache_between_runs": false,
+  "num_logits_to_keep": 1,
+  "eos_policy": "mask EOS on every generation step, matching min_new_tokens=max_new_tokens=N"
+}
